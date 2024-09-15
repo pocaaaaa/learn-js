@@ -1,0 +1,29 @@
+<!-- 
+  [출처] 하단의 영상을 보고 진행한 내용입니다. 
+  https://www.youtube.com/watch?v=XhfPaNTEuTs
+-->
+
+<link rel="stylesheet" href="style.css">
+<script type='text/javascript' src='/knockout-3.5.1.js'></script>
+<script type='text/javascript' src='/learn-01/intro-and-basics/app.js'></script>
+
+<div id="knockout-app" class="card">
+  <header>
+    Good Dog Walks Inc.
+  </header>
+  <div class="card-section">
+    <h2>Hello, <span data-bind="text: firstName"></span></h2>
+    <p>How many walks will we take today?</p>
+    <div class="counter-ui-container">
+        <button data-bind="click: decrease">-</button>
+        <span class="counter" data-bind="text: count">0</span>
+        <button data-bind="click: increase">+</button>
+    </div>
+    <p>
+        Your dog is <span data-bind="text: dogStatus"></span>
+    </p>
+  </div>
+  <footer>
+    <span>Have a tail wagging day!</span>
+  </footer>
+</div>

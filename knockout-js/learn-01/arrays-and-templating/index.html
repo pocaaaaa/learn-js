@@ -1,0 +1,36 @@
+<!--
+  [출처] 하단의 영상을 보고 진행한 내용입니다. 
+  https://www.youtube.com/watch?v=dir9iHcUkZI&t=101s
+-->
+
+<link rel="stylesheet" href="style.css">
+<script type='text/javascript' src='/knockout-3.5.1.js'></script>
+<script type='text/javascript' src='/learn-01/arrays-and-templating/app.js'></script>
+
+<div id="knockout-app" class="card">
+  <header>
+    Good Dog Walks Inc.
+  </header>
+  <div class="card-section">
+    <h2>Toy Inventory</h2>
+    <p data-bind="visible: inventory().length > 0">These are the assets we have to work with.</p>
+    <p data-bind="visible: inventory().length === 0">You don't have any toys yet!</p>
+    <button data-bind="click: addItem, enable: inventory().length < 4">+ Add Toy</button>
+    <ul class="counter-ui-container" data-bind="foreach: inventory">
+      <li>
+        <span>
+          <span data-bind="class: $data.icon"></span>
+          <span data-bind="text: $data.text"></span>
+        </span>
+        <span>
+          <button data-bind="click: $parent.removeItem, attr: { 'item-index': $index }">
+            &times;
+          </button>
+        </span>
+      </li>
+    </ul>
+  </div>
+  <footer>
+    <span>Have a tail wegging day!</span>
+  </footer>
+</div>
