@@ -37,3 +37,35 @@ let week2: Array<string> = ["mon", "tue", "wed"];
 
 // 튜플 (Tuple)
 let b: [string, number];
+b = ["z", 1];
+//b = [1, 'z'];
+
+b[0].toLowerCase();
+//b[1].toLowerCase(); -> error
+
+// void, never
+function sayHello(): void {}
+
+function sgiwError(): never {
+  throw new Error();
+}
+
+function infLoop() {
+  while (true) {
+    // do something
+  }
+}
+
+// enum : 비슷한 값끼리 묶은 것
+enum Os {
+  Window = "win",
+  Ios = "ios",
+  Android = "and",
+}
+
+let myOs: Os;
+myOs = Os.Window;
+
+// null, undefined
+let a3: null = null;
+let b3: undefined = undefined;
