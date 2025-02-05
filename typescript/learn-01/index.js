@@ -44,14 +44,83 @@ function infLoop() {
     }
 }
 // enum : 비슷한 값끼리 묶은 것
-var Os;
-(function (Os) {
-    Os["Window"] = "win";
-    Os["Ios"] = "ios";
-    Os["Android"] = "and";
-})(Os || (Os = {}));
+var OS;
+(function (OS) {
+    OS["Window"] = "win";
+    OS["Ios"] = "ios";
+    OS["Android"] = "and";
+})(OS || (OS = {}));
 var myOs;
-myOs = Os.Window;
+myOs = OS.Window;
 // null, undefined
 var a3 = null;
 var b3 = undefined;
+// Generic
+// function getSize(arr: number[] | string[]): number {
+//   return arr.length;
+// }
+function getSize(arr) {
+    return arr.length;
+}
+var arr1 = [1, 2, 3];
+getSize(arr1);
+var arr2 = ["a", "b", "c"];
+getSize(arr2);
+var arr3 = [false, true, true];
+getSize(arr3);
+var arr4 = [{}, {}, { name: "Tim" }];
+//getSize<object>(arr4);
+getSize(arr4);
+var m1 = {
+    name: "s21",
+    price: 1000,
+    option: {
+        color: "red",
+        coupon: false,
+    },
+};
+var m2 = {
+    name: "s20",
+    price: 900,
+    option: "good",
+};
+var user7 = { name: "a", age: 10 };
+var car7 = { name: "bmw", color: "red" };
+var book7 = { price: 3000 };
+function showName(data) {
+    return data.name;
+}
+showName(user7);
+showName(car7);
+var uk = "id";
+// Partial<T>
+var admin = {
+    id: 1,
+    name: "Bob",
+    // job: "" -> error
+};
+var admin2 = {
+    id: 1,
+    name: "Bob",
+};
+// Readonly
+var admin3 = {
+    id: 1,
+    name: "Bob",
+};
+var score = {
+    1: "A",
+    2: "C",
+    3: "B",
+    4: "D",
+};
+// Pick<T, K>
+var admin4 = {
+    id: 0,
+    name: "Bob",
+};
+// Omit<T, K>
+var admin5 = {
+    id: 0,
+    name: "Bob",
+};
