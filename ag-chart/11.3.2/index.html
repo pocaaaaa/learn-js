@@ -1,0 +1,37 @@
+<!-- 출처 : https://codesandbox.io/p/sandbox/nm8kqv?file=%2Fpackage.json%3A6%2C2 -->
+<!-- 출처 : https://codesandbox.io/p/sandbox/z6c4nk?file=%2Findex.html -->
+<!-- 출처 : https://www.ag-grid.com/charts/javascript/axes-labels/ -->
+
+<html lang="en">
+  <head>
+    <title>JavaScript Example - Axes Labels - Axis Parent Level</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="ag-example-styles.css" />
+    <style>
+      body {
+        padding: 1rem;
+      }
+
+      div:has(> .ag-charts-wrapper),
+      ag-charts,
+      ag-financial-charts {
+        padding: 0 !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="example-controls">
+      <div class="controls-row">
+        <button onclick="zoomOut()">Zoom All Data</button>
+        <button onclick="zoomMonth()">Zoom Last Month</button>
+      </div>
+    </div>
+    <div id="myChart"></div>
+    <script src="https://cdn.jsdelivr.net/npm/ag-charts-enterprise@11.3.2/dist/umd/ag-charts-enterprise.js?t=1749043545862"></script>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
