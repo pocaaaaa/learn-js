@@ -182,9 +182,11 @@ const chartOptions3 = {
   //     },
   //   },
   // ],
+
+  //  !! 실패케이스
   axes: [
     {
-      type: "time",
+      type: "category",
       position: "bottom",
       nice: false,
       interval: {
@@ -196,6 +198,19 @@ const chartOptions3 = {
         },
       },
     },
+    // {
+    //   type: "time",
+    //   position: "bottom",
+    //   nice: false,
+    //   interval: {
+    //     maxSpacing: 180,
+    //   },
+    //   crosshair: {
+    //     label: {
+    //       format: "%d %b %Y",
+    //     },
+    //   },
+    // },
     {
       type: "number",
       position: "left",
